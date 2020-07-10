@@ -259,7 +259,7 @@ collector:
     annotations: {}
     # List of IP ranges that are allowed to access the load balancer (if supported)
     loadBalancerSourceRanges: []
-    type: LoadBalancer
+    type: ClusterIP
     grpc:
       port: 14250
       # nodePort:
@@ -350,7 +350,7 @@ query:
   replicaCount: 1
   service:
     annotations: {}
-    type: ClusterIP
+    type: LoadBalancer
     # List of IP ranges that are allowed to access the load balancer (if supported)
     loadBalancerSourceRanges: []
     port: 80
